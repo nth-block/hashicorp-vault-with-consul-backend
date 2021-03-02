@@ -2,7 +2,7 @@
 
 ## Consul server cluster installation
 
-Follow the steps outlined in `01-consul-server-setup.md`.
+Follow the steps outlined in [01-consul-server-setup.md](01-consul-server-setup.md).
 
 > The consul server setup needs to be done for each consul server that you are using in the cluster.
 
@@ -55,7 +55,7 @@ Therefore, we first have to install the `consul agent` service in the machine fi
 
 ### Installation of the consul agent
 
-Follow the `02-vault-and-consul-agents-setup.md` file for the installation of the vault.
+Follow the [02-vault-and-consul-agents-setup.md](02-vault-and-consul-agents-setup.md) file for the installation of the vault.
 
 The template for the connfiguration is as follows. Details about the nuances to remember will follow the config sample.
 
@@ -86,7 +86,7 @@ The template for the connfiguration is as follows. Details about the nuances to 
 
 ### Installation of the vault
 
-The vault configuration is again outlined in the `02-vault-and-consul-agents-setup.md` file.
+The vault configuration is again outlined in the [02-vault-and-consul-agents-setup.md](02-vault-and-consul-agents-setup.md) file.
 
 Config file sample for the vault configuration
 
