@@ -1,6 +1,21 @@
-# Consul Server setup 
+- [Consul Cluster Installation](#consul-cluster-installation)
+  - [Consul server](#consul-server)
+    - [Download consul binaries](#download-consul-binaries)
+    - [Create the necessary users](#create-the-necessary-users)
+    - [Create the data_dir and config for the consul server](#create-the-data_dir-and-config-for-the-consul-server)
+    - [Consul server config](#consul-server-config)
+    - [Consul server systemctl script configuration](#consul-server-systemctl-script-configuration)
+    - [Starting the consul service](#starting-the-consul-service)
+    - [Check the status of the consul service](#check-the-status-of-the-consul-service)
+  - [Common tests](#common-tests)
+    - [Consul members](#consul-members)
+    - [Consul peers](#consul-peers)
+- [Making the DNS settings](#making-the-dns-settings)
+- [References](#references)
 
-## Consul-1 server
+# Consul Cluster Installation
+
+## Consul server
 
 > Repeat the steps in this chapter for all consul members
 
@@ -31,7 +46,7 @@ sudo mkdir -p /usr/local/etc/consul/
 
 ```
 
-### Consul-1 server config 
+### Consul server config 
  
 This file must be saved as `/usr/local/etc/consul/consul-1.json`
 
@@ -53,7 +68,7 @@ This file must be saved as `/usr/local/etc/consul/consul-1.json`
 }
 ```
 
-### Consul-1 server systemctl script configuration
+### Consul server systemctl script configuration
 
 This file must be saved as `/etc/systemd/system/consul.service`
 
@@ -153,7 +168,7 @@ consul-1  9d8f9713-4eb6-464b-8dad-cf8e6d899243  10.0.0.4:8300  leader    true   
 consul-2  ac18c5b4-6bd9-58cc-ad7d-faecd4aac559  10.0.0.5:8300  follower  true   3
 ```
 
-## Making the DNS settings
+# Making the DNS settings
 
 `sudo vim.tiny /etc/hosts`
 

@@ -1,3 +1,29 @@
+- [Consul agents installation and configuration](#consul-agents-installation-and-configuration)
+  - [Downloading the binaries](#downloading-the-binaries)
+  - [Setting up the consult agent](#setting-up-the-consult-agent)
+    - [Create the necessary users](#create-the-necessary-users)
+    - [Create the data_dir and config for the consul server](#create-the-data_dir-and-config-for-the-consul-server)
+    - [Create the pid dir for the vault server](#create-the-pid-dir-for-the-vault-server)
+  - [Consul Agent Config in Vault machine](#consul-agent-config-in-vault-machine)
+  - [Systemctl config script](#systemctl-config-script)
+  - [Starting the consul service](#starting-the-consul-service)
+  - [Check the status of the consul service](#check-the-status-of-the-consul-service)
+  - [Common tests](#common-tests)
+    - [View all the participants in the consul cluster](#view-all-the-participants-in-the-consul-cluster)
+- [Vault installation and configuration](#vault-installation-and-configuration)
+  - [Downloading the vault binaries](#downloading-the-vault-binaries)
+  - [Setup the config paths](#setup-the-config-paths)
+  - [Vault server configuration](#vault-server-configuration)
+  - [Vault server systemctl config script](#vault-server-systemctl-config-script)
+  - [Starting the vault server service](#starting-the-vault-server-service)
+  - [Check the status of the consul service](#check-the-status-of-the-consul-service-1)
+  - [Common tests](#common-tests-1)
+    - [Set the VAULT_ADDR environment variable](#set-the-vault_addr-environment-variable)
+    - [Vault status](#vault-status)
+    - [Initialize the vault](#initialize-the-vault)
+- [Making the DNS settings](#making-the-dns-settings)
+- [References](#references)
+
 # Consul agents installation and configuration
 
 These setups must be done in the vault.
@@ -37,7 +63,7 @@ sudo mkdir -p /usr/local/etc/consul/
 
 `sudo mkdir -p /var/run/vault/`
 
-# Vault-1 Consul Agent Config
+## Consul Agent Config in Vault machine
 
 This file must be saved as `/usr/local/etc/consul/vault-1.json`
 
@@ -251,15 +277,15 @@ Mar 01 17:30:16 vault-1 vault[15280]: 2021-03-01T17:30:16.559Z [INFO]  core: sec
 Mar 01 17:30:16 vault-1 vault[15280]: 2021-03-01T17:30:16.563Z [INFO]  core: seal configuration missing, not initialized
 ```
 
-# Common tests
+## Common tests
 
-## Set the VAULT_ADDR environment variable
+### Set the VAULT_ADDR environment variable
 
 ```
 export VAULT_ADDR=http://127.0.0.1:8200
 ```
 
-## Vault status
+### Vault status
 
 `vault status`
 
@@ -278,7 +304,7 @@ Storage Type       consul
 HA Enabled         true
 ```
 
-## Initialize the vault
+### Initialize the vault
 
 ```
 vault operator init
@@ -305,7 +331,7 @@ existing unseal keys shares. See "vault operator rekey" for more information.
 
 > Save these above unseal keys and root token very securely.
 
-## Making the DNS settings
+# Making the DNS settings
 
 `sudo vim.tiny /etc/hosts`
 

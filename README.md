@@ -1,3 +1,11 @@
+- [Steps to follow this guide](#steps-to-follow-this-guide)
+  - [Consul server cluster installation](#consul-server-cluster-installation)
+  - [Vault and consul agent installation](#vault-and-consul-agent-installation)
+    - [Installation of the consul agent](#installation-of-the-consul-agent)
+    - [Installation of the vault](#installation-of-the-vault)
+- [Demystifying consul backend for vault](#demystifying-consul-backend-for-vault)
+- [Open TODOs](#open-todos)
+
 # Steps to follow this guide
 
 ## Consul server cluster installation
