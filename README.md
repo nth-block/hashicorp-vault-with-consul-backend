@@ -131,5 +131,5 @@ Presumably, the consul server says, "Hang on just a sec! I will store the secret
 
 # Open TODOs
 
-[] The systemd services that are defined do not start automatically on a system reboot. This support must be added.
-[] Static IP addresses assignment for the machines involved.
+- [ ] The systemd services that are defined do not start automatically on a system reboot. This support must be added.
+- [ ] Static IP addresses assignment for the machines involved.
