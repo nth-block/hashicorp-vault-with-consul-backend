@@ -9,7 +9,7 @@
 ```
 export VER=1.9.3
 wget https://releases.hashicorp.com/consul/${VER}/consul_${VER}_linux_amd64.zip
-sudo apt-get install -y unzip 
+sudo apt-get install -y unzip
 sudo unzip consul_${VER}_linux_amd64.zip
 sudo chmod +x consul
 sudo mv consul /usr/local/bin/
