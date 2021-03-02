@@ -5,7 +5,6 @@
     - [Installation of the vault](#installation-of-the-vault)
 - [Demystifying consul backend for vault](#demystifying-consul-backend-for-vault)
 - [Open TODOs](#open-todos)
-
 # Steps to follow this guide
 
 ## Consul server cluster installation
